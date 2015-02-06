@@ -7,12 +7,12 @@ require('../../styles/CommentList.css');
 var CommentList = React.createClass({
   render: function () {
     return (
-        <div>
-          <p>Content for CommentList</p>
-        </div>
+        <div className="commentList">
+        	Hello, world! I am a CommentList.
+      	</div>
       );
   }
 });
 
-module.exports = CommentList; 
+module.exports = CommentList;
 

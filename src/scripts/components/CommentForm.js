@@ -7,12 +7,12 @@ require('../../styles/CommentForm.css');
 var CommentForm = React.createClass({
   render: function () {
     return (
-        <div>
-          <p>Content for CommentForm</p>
-        </div>
+        <div className="commentForm">
+        	Hello, world! I am a CommentForm.
+      	</div>
       );
   }
 });
 
-module.exports = CommentForm; 
+module.exports = CommentForm;
 
