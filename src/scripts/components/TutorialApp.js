@@ -23,7 +23,7 @@ var TutorialApp = React.createClass({
     	return (
       		<div className='main'>
         		<ReactTransitionGroup transitionName="fade">
-          		<CommentBox data={data}/>
+          		<CommentBox url="comments.json" pollInterval={2000}/>
        			 </ReactTransitionGroup>
       		</div>
     );
