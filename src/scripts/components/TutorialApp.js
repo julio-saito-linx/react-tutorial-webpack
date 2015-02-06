@@ -2,6 +2,7 @@
 
 var React = require('react/addons');
 var ReactTransitionGroup = React.addons.TransitionGroup;
+var CommentBox = require('./CommentBox');
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;
@@ -10,18 +11,18 @@ var ReactTransitionGroup = React.addons.TransitionGroup;
 require('../../styles/normalize.css');
 require('../../styles/main.css');
 
-var imageURL = require('../../images/yeoman.png');
-
 var TutorialApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
-          <img src={imageURL} />
+          <CommentBox />
         </ReactTransitionGroup>
       </div>
     );
   }
 });
+
+// <CommentBox />
 
 module.exports = TutorialApp;

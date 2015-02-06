@@ -7,12 +7,12 @@ require('../../styles/CommentBox.css');
 var CommentBox = React.createClass({
   render: function () {
     return (
-        <div>
-          <p>Content for CommentBox</p>
-        </div>
+        <div className="CommentBox">
+        	Hello, world! I am a CommentBox.
+      	</div>
       );
   }
 });
 
-module.exports = CommentBox; 
+module.exports = CommentBox;
 
