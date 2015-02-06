@@ -6,12 +6,13 @@ var CommentForm = require('./CommentForm');
 
 require('../../styles/CommentBox.css');
 
+
 var CommentBox = React.createClass({
   render: function () {
     return (
         <div className="commentBox">
         	<h1>Comments</h1>
-        	<CommentList />
+        	<CommentList data={this.props.data}/>
         	<CommentForm />
       </div>
       );
