@@ -12,7 +12,7 @@ var Comment = React.createClass({
   },
   handleRemove: function(e) {
     e.preventDefault();
-    this.setState( { removeText: 'removing' } );
+    this.setState( { removeText: 'removing on server...' } );
     // POST to delete
     $.ajax({
         url: 'http://localhost:3000/comments.json',
@@ -20,7 +20,7 @@ var Comment = React.createClass({
         type: 'POST',
         data: { action: 'delete', id: this.props.id },
         success: function(data) {
-          this.setState( { removeText: 'removed' } );
+          this.setState( { removeText: 'removed on server' } );
         }.bind(this),
         error: function(xhr, status, err) {
             console.error(this.props.url, status, err.toString());
