@@ -10,6 +10,7 @@ require('../../styles/CommentBox.css');
 
 var CommentBox = React.createClass({
     loadCommentsFromServer: function() {
+        // GET
         $.ajax({
             url: this.props.url,
             dataType: 'json',
@@ -22,6 +23,11 @@ var CommentBox = React.createClass({
         });
     },
     handleCommentSubmit: function(comment) {
+        // optimistic updates
+        var comments = this.state.data;
+        var newComments = comments.concat([comment]);
+        this.setState({data: newComments});
+        // POST
         $.ajax({
             url: this.props.url,
             dataType: 'json',
