@@ -17,6 +17,8 @@ var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var uuid = require('node-uuid');
+var _ = require('lodash');
 
 fs.exists('_comments.json', function (exists) {
   if (!exists) {
@@ -48,7 +50,31 @@ app.get('/comments.json', function(req, res) {
 app.post('/comments.json', function(req, res) {
   fs.readFile('_comments.json', function(err, data) {
     var comments = JSON.parse(data);
-    comments.push(req.body);
+
+    /* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.      DEBUG */
+    var target = req.body;
+    var depth  = 2; var inspectResult = require("util").inspect(target,
+      { showHidden:!0, colors:!0, depth:depth });
+    console.log("\n",
+      ">>------------------------------------------------------\n",
+      "  ##  req.body\n",
+      "  ------------------------------------------------------\n",
+      "  source: ( " + __filename + " )" + "\n",
+      "  ------------------------------------------------------\n",
+      "" + inspectResult + "\n",
+      "<<------------------------------------------------------\n",
+      "");
+    /* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. /END-DEBUG */
+
+    if (req.body.action === 'delete') {
+      comments = _.reject(comments, function(comment) {
+        return comment.id === req.body.id;
+      });
+    } else {
+      req.body.id = uuid.v4();
+      comments.push(req.body);
+    }
+
     fs.writeFile('_comments.json', JSON.stringify(comments, null, 4), function(err) {
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify(comments));
