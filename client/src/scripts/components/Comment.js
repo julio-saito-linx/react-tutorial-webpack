@@ -15,7 +15,7 @@ var Comment = React.createClass({
     this.setState( { removeText: 'removing on server...' } );
     // POST to delete
     $.ajax({
-        url: 'http://localhost:3000/comments.json',
+        url: 'http://server.dev.azk.io/comments.json',
         dataType: 'json',
         type: 'POST',
         data: { action: 'delete', id: this.props.id },
