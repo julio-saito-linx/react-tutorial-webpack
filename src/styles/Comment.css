@@ -1,3 +1,11 @@
 .Comment {
-  border: 1px dashed #f00;
+  border: 1px dashed #ff0;
+}
+
+div {
+  margin: 15px !important;
+}
+
+h1, h2, p, input {
+  margin: 15px !important;
 }

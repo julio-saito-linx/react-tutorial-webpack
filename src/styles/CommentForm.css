@@ -1,3 +1,7 @@
 .CommentForm {
-  border: 1px dashed #f00;
+  border: 1px dashed #0ff;
+}
+input {
+	padding: 8px;
+	color: #000 !important;
 }
