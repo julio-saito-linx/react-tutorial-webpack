@@ -1,3 +1,6 @@
 .CommentBox {
   border: 1px dashed #f00;
 }
+hr {
+	margin: 40px 0;
+}

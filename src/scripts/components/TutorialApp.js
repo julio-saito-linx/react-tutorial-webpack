@@ -11,13 +11,6 @@ var CommentBox = require('./CommentBox');
 require('../../styles/normalize.css');
 require('../../styles/main.css');
 
-
-var data = [
-  {author: "Peter Hunter", text: "This is one comment"},
-  {author: "Jonny Walker", text: "This is *another* new _comment_"}
-];
-
-
 var TutorialApp = React.createClass({
   render: function() {
     	return (
