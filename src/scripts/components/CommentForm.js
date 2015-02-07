@@ -13,7 +13,7 @@ var CommentForm = React.createClass({
           	return;
         }
         this.props.onCommentSubmit({author: author, text: text});
-        this.refs.author.getDOMNode().value = '';
+        //this.refs.author.getDOMNode().value = '';
         this.refs.text.getDOMNode().value = '';
     },
     render: function() {
@@ -33,8 +33,6 @@ var CommentForm = React.createClass({
               </div>
             </div>
           </form>
-
-
         );
     }
 });
