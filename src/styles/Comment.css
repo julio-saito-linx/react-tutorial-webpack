@@ -1,6 +1,16 @@
 .Comment {
-  border: 1px dashed #ff0;
-  margin: 15px;
-  padding: 0 0 0 15px;
-  background-color: #333;
+  	border: 1px dashed #ff0;
+  	margin: 15px;
+  	padding: 0 0 0 15px;
+  	background-color: #333;
+}
+
+.commentAuthor {
+	font-size: 14px;
+	color: rgb(96, 182, 182);
+}
+
+.commentBody {
+	font-size: 15px;
+	color: rgb(232, 233, 233);
 }
