@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "",
+  "script": {
+    "starts": "node server"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  }
+}
