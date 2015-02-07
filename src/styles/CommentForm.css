@@ -1,7 +1,22 @@
 .CommentForm {
   border: 1px dashed #0ff;
+  margin: 20px;
 }
-input {
-	padding: 8px;
+
+#text {
+	width: 90%;
+	padding: 10px;
+	margin: 0 5px;
 	color: #000 !important;
+}
+
+#author {
+	width: 90%;
+	padding: 10px;
+	margin: 0 5px;
+	color: #000 !important;
+}
+#postButton {
+	padding: 10px;
+	background-color: black;
 }

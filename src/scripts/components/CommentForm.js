@@ -18,11 +18,23 @@ var CommentForm = React.createClass({
     },
     render: function() {
       	return (
-        	<form className="commentForm" onSubmit={ this.handleSubmit }>
-  	        <input type="text" placeholder="Your name" ref="author" />
-  	        <input type="text" placeholder="Say something..." ref="text" />
-            	<input type="submit" value="Post" />
-          	</form>
+        	<form className="CommentForm" onSubmit={ this.handleSubmit }>
+            <div className="section group">
+              <div className="col span_3_of_4">
+                <textarea rows="5" placeholder="Your markdown comment..." ref="text" id="text" />
+              </div>
+            </div>
+            <div className="section group">
+              <div className="col span_1_of_4">
+                <input type="text" placeholder="Your name" ref="author" id="author" />
+              </div>
+              <div className="col span_1_of_4">
+                <input type="submit" value="Post" id="postButton" />
+              </div>
+            </div>
+          </form>
+
+
         );
     }
 });
